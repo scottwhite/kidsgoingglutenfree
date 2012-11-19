@@ -44,7 +44,9 @@ div.tile.green{
 div.tile.yellow{
     background-color: #f2e140;
 }
-
+div.tile.purple{
+    background-color: #b440f2;
+}
 div.tile.white{
     background-color: #fff;
 }
