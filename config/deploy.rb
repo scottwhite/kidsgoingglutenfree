@@ -17,8 +17,10 @@ set :copy_exclude, ["config/deploy.rb","lib/tasks/rspec.rake", "doc", "spec"]
 # ssh_options[:forward_agent] = true
 
 set :deploy_to,"/var/www/#{application}"
-# set :user, 'scott'
-# set :use_sudo, false
+set :user, 'scott'
+set :use_sudo, false
+
+set :normalize_asset_timestamps, false
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
