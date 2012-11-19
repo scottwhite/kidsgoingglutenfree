@@ -2,5 +2,52 @@
 
 body{
   color: #666;
+  background-color: #666;
   font-family: ABeeZee;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+div.table {
+    display:table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 10px;
+}
+
+div.tile{
+    /*border: solid #fff 2px;*/
+    height:180px;
+    width: 300px;
+    /*display: table-cell;*/
+    padding: 10px;
+    float: left;
+    margin: 5px;
+    background-repeat: no-repeat;
+}       
+div.tile a{
+    color: #fff;
+}
+
+div.tile.blue{
+    background-color: #4055f2;
+}
+div.tile.red{
+    background-color: #f24340;
+}
+div.tile.orange{
+    background-color: #f29440;
+}
+div.tile.green{
+    background-color: #51f240;
+}
+div.tile.yellow{
+    background-color: #f2e140;
+}
+
+div.tile.white{
+    background-color: #fff;
+}
+div.tile.white a{
+    color: #666;
 }

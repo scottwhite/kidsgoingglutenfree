@@ -1,5 +1,5 @@
 angular.module('kggf_services', ['ngResource']).
-    factory('Stories', function($resource){
+    factory('Story', function($resource){
   return $resource('/data/stories.json', {}, {
     query: {method:'GET', params:{}, isArray:true}
   });
