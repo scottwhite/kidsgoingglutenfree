@@ -1,0 +1,18 @@
+# require 'capistrano/ext/multistage'
+
+set :application, "kidsgoingglutenfree"
+set :repository, "git@github.com:scottwhite/kidsgoingglutenfree.git"
+set :scm, "git"
+set :branch, "master"
+# set :deploy_via, :remote_cache
+
+set :deploy_via, :copy
+set :copy_strategy, :export
+set :copy_exclude, ["config/deploy.rb","lib/tasks/rspec.rake", "doc", "spec"]
+
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+
+set :deploy_to,"/var/www/#{application}"
+set :user, 'scott'
+set :use_sudo, false
