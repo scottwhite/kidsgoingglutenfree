@@ -30,27 +30,39 @@ div.tile a{
     color: #fff;
 }
 
-div.tile.blue{
+.blue{
     background-color: #4055f2;
 }
-div.tile.red{
+.red{
     background-color: #f24340;
 }
-div.tile.orange{
+.orange{
     background-color: #f29440;
 }
-div.tile.green{
+.green{
     background-color: #51f240;
 }
-div.tile.yellow{
+.yellow{
     background-color: #f2e140;
 }
-div.tile.purple{
+.purple{
     background-color: #b440f2;
 }
-div.tile.white{
+.white{
     background-color: #fff;
 }
-div.tile.white a{
+.white a{
     color: #666;
+}
+
+#details{
+    padding: 10px;
+    width: 600px;
+    height: 600px;
+    border-radius: 0;
+    background-color: #fff;
+    overflow: auto;
+}
+#details > div{
+    margin: 10px;
 }

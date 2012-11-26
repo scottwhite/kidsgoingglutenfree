@@ -3,23 +3,34 @@
 <head>
 <meta charset="utf-8">
 <title>Kids Going Gluten Free</title>
+<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body ng-controller="MainCtrl">
     <div id="about-me">
     </div>
-
-    <div class="table">
-        <div ng-repeat="story in stories" class="tile {{colors[($index % colors.length)]}}" style="background-image: url({{story.meta.image}})">
-            <a>{{story.title}}</a>
-            
+    <div class="table" ng-cloak>
+        <div ng-cloak ng-repeat="story in stories" class="tile {{colors[($index % colors.length)]}}" style="background-image: url({{story.meta.image}})">
+            <a ng-click="show_details(story.title, $index)">{{story.title}}</a>
         </div>
     </div>
-<!-- load the bacon -->
+
+    <div ng-cloak id="details" class="fade" ui-modal ng-model="modal_shown">
+        <a ng-click='modal_shown=false'>Close</a>
+        <div ng-bind-html="story_details.body"></div>
+        
+    </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/services.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js"></script>
+<script src="https://github.com/angular-ui/angular-ui/raw/master/build/angular-ui.min.js"></script>
+
+
 </body>
 </html>
