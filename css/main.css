@@ -56,12 +56,22 @@ div.tile a{
 }
 
 #details{
+    color: #fff;
+    background: #c196fa; /* Old browsers */
+background: -moz-linear-gradient(top, #c196fa 0%, #a567f5 47%, #8331ef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c196fa), color-stop(47%,#a567f5), color-stop(100%,#8331ef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #c196fa 0%,#a567f5 47%,#8331ef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #c196fa 0%,#a567f5 47%,#8331ef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #c196fa 0%,#a567f5 47%,#8331ef 100%); /* IE10+ */
+background: linear-gradient(to bottom, #c196fa 0%,#a567f5 47%,#8331ef 100%); /* W3C */
     padding: 10px;
     width: 600px;
     height: 550px;
     border-radius: 0;
-    background-color: #fff;
     overflow: auto;
+}
+#details > a {
+    color: #efefef;
 }
 #details > div{
     margin: 10px;
