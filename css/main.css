@@ -17,6 +17,7 @@ div.table {
 }
 
 div.tile{
+    cursor: pointer;
     /*border: solid #fff 2px;*/
     height:180px;
     width: 300px;
